@@ -7,7 +7,6 @@ import Header from "./component/Header/Header"
 import EventPage from "./component/Event/EventPage"
 import DetailedEventPage from "./component/DetailedEvent/DetailedEventPage"
 
-
 const AppRouter = () =>{
   return <Router history={history}>
           <main>
