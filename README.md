@@ -1,6 +1,9 @@
 NYU IT Event plant front-end developer challange:
 https://docs.google.com/document/d/18419yHn-j6S3TLxR8yFMUjlcMqJKDHUJ4K3nqpKxqZY/edit
 
+My Personal Website!!!
+http://jeffxc-the-developer.s3-website-us-east-1.amazonaws.com
+
 Deployed Website:
 https://event-planner-69441.firebaseapp.com/
 
