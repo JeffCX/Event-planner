@@ -1,10 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+NYU IT Event plant front-end developer challange:
+https://docs.google.com/document/d/18419yHn-j6S3TLxR8yFMUjlcMqJKDHUJ4K3nqpKxqZY/edit
 
-## Available Scripts
+Deployed Website:
+https://event-planner-69441.firebaseapp.com/
+
+I use ReactJs and material UI to implement the application. 
+I use cutting-edge react hook to manage the state, since the state is not overly complicated, I did not 
+use context API or redux. If the web is sacled, redux.
+
+I also integrate google Map API to render marker and Yelp API to retrieve and sort events by location and distance.
+
+I implement a lightweight nodjs backend as a proxy server to make Yelp fusion api call. 
+
+I use firebase hosting service to host this single page application.
+
+I test the app on mobile device, google chrome and firefox, it all looks good.
+
+## future improvement: 
+refractor the aysnchrous code to api folder to increase modularity and scalablity.
+Add SASS to write scalable style sheet (Material UI comes with JSS by default)
+improve UI.
+
+## Error handling:
+if the user do not share the geolocaiton or the backend server (my server or Yelp server crahsed), the frontend app is 
+unable to fetch events information.
+
+## Run the project: front end 
 
 In the project directory, you can run:
 
-### `npm start`
+### npm start
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
@@ -37,32 +62,25 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Run the project: back end 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### cd event-yelp-api && npm install 
+note that you need to go to yelp website and sign up for an developer account
+https://www.yelp.com/developers/documentation/v3/authentication
+then set up the environment variable: 
+export key=[YOUR_API_KEY]
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### npm start 
+run the app, free to test the app using postman or curl
 
-### Code Splitting
+### deployment:
+make sure you install firebase-cli
+https://firebase.google.com/docs/cli/
+npm run build && firebase deploy
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-### Making a Progressive Web App
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-### Advanced Configuration
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
