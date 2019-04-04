@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Loader from "../Loader/Loader"
 import axios from "axios"
 import {calDistanceOnMap} from "../../api/calDistanceOnMap"
+import * as uuid from "uuid"
+import token from "../../config.js"
 
 let endpoint = "https://event-planner-backend.herokuapp.com/getEvents"  
 
@@ -18,7 +20,7 @@ const EventPage = (props) => {
 
   useEffect( () => {
 
-    axios.get(endpoint, { headers: { Authorization: "key" } }).then(response => {
+    axios.get(endpoint, { headers: { Authorization: token } }).then(response => {
       setEvents(response.data)
     })
     .catch((error) => {
@@ -68,6 +70,7 @@ const EventPage = (props) => {
                   cost={cost}
                   time_start={time_start}
                   key={business_id}
+                  business_id={uuid()}
                 />
       })
     }else{

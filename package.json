@@ -10,13 +10,15 @@
     "react-dom": "16.8.6",
     "react-google-maps": "^9.4.5",
     "react-router-dom": "4.3.1",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "uuid": "^3.3.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm run build && firebase deploy"
   },
   "proxy": "https://api.yelp.com/v3",
   "eslintConfig": {
